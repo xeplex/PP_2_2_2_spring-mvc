@@ -33,8 +33,7 @@ public class CarDaoImpl implements CarDao {
     public List<Car> getCarsByCount(Integer count) {
         if (count == null || count >= 5) {
             return carList;
-        } else {
-            return carList.stream().limit(count).toList();
         }
+        return carList.stream().limit(count).toList();
     }
 }
